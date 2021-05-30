@@ -1,10 +1,10 @@
-#Knife
+# Knife
 Difficulty: Easy 	IP: 10.10.10.242
 
 Saved the IP with domain as knife.htb in /etc/hosts.
 Scanned the IP with rustscan and fot 22 and 80 open ports.
 Got an entry point fron nikto scan: PHP 8.1.0-dev
-Searched for its exploit and got it(https://github.com/fahmifj/php-zerodium-rce/blob/main/zerodiumRCE.py).
+Searched for its exploit and [got it](https://github.com/fahmifj/php-zerodium-rce/blob/main/zerodiumRCE.py).
 
 ## User.txt
 
@@ -20,7 +20,7 @@ Got a shell as james. User.txt was in his home directory.
 bbda296ff7e4f54843a3b7b49498f0c2
 ```
 
-This was not a complete stable shell. To get a stable shell, I used this article(https://blog.csdn.net/qq_44159028/article/details/116992989).
+This was not a complete stable shell. To get a stable shell, I used this [article](https://blog.csdn.net/qq_44159028/article/details/116992989).
 Sent a request from browser to brupsuite and added a header to it.
 
 ```
