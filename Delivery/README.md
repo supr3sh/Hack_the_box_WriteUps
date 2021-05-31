@@ -1,5 +1,5 @@
 # ScriptKiddie
-IP: 10.10.10.222		Difficulty: Easy
+IP: 10.10.10.222		Difficulty: Easy <br />
 Scanned the IP with rustscan and got 22,80,8065 open.
 80 and 8065 are HTTP.
 
