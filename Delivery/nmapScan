@@ -1,0 +1,80 @@
+# Nmap 7.91 scan initiated Mon May 31 09:00:38 2021 as: nmap -vvv -p 22,80,8065 -sC -sV -oN nmapScan 10.10.10.222
+Nmap scan report for 10.10.10.222
+Host is up, received reset ttl 63 (0.16s latency).
+Scanned at 2021-05-31 09:00:39 IST for 101s
+
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq549E025Q9FR27LDR6WZRQ52ikKjKUQLmE9ndEKjB0i1qOoL+WzkvqTdqEU6fFW6AqUIdSEd7GMNSMOk66otFgSoerK6MmH5IZjy4JqMoNVPDdWfmEiagBlG3H7IZ7yAO8gcg0RRrIQjE7XTMV09GmxEUtjojoLoqudUvbUi8COHCO6baVmyjZRlXRCQ6qTKIxRZbUAo0GOY8bYmf9sMLf70w6u/xbE2EYDFH+w60ES2K906x7lyfEPe73NfAIEhHNL8DBAUfQWzQjVjYNOLqGp/WdlKA1RLAOklpIdJQ9iehsH0q6nqjeTUv47mIHUiqaM+vlkCEAN3AAQH5mB/1
+|   256 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAiAKnk2lw0GxzzqMXNsPQ1bTk35WwxCa3ED5H34T1yYMiXnRlfssJwso60D34/IM8vYXH0rznR9tHvjdN7R3hY=
+|   256 b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEV5D6eYjySqfhW4l4IF1SZkZHxIRihnY6Mn6D8mLEW7
+80/tcp   open  http    syn-ack ttl 63 nginx 1.14.2
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.2
+|_http-title: Welcome
+8065/tcp open  unknown syn-ack ttl 63
+| fingerprint-strings: 
+|   GenericLines, Help, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Accept-Ranges: bytes
+|     Cache-Control: no-cache, max-age=31556926, public
+|     Content-Length: 3108
+|     Content-Security-Policy: frame-ancestors 'self'; script-src 'self' cdn.rudderlabs.com
+|     Content-Type: text/html; charset=utf-8
+|     Last-Modified: Sun, 30 May 2021 01:23:56 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-Request-Id: u39qjr4c9tfmuj7k4jn4iuoc3a
+|     X-Version-Id: 5.30.0.5.30.1.57fb31b889bf81d99d8af8176d4bbaaa.false
+|     Date: Mon, 31 May 2021 03:42:34 GMT
+|     <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta name="robots" content="noindex, nofollow"><meta name="referrer" content="no-referrer"><title>Mattermost</title><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Mattermost"><meta name="format-detection" content="telephone=no"><link re
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Date: Mon, 31 May 2021 03:42:35 GMT
+|_    Content-Length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8065-TCP:V=7.91%I=7%D=5/31%Time=60B45866%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x
+SF:20Request")%r(GetRequest,DF3,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\
+SF:x20bytes\r\nCache-Control:\x20no-cache,\x20max-age=31556926,\x20public\
+SF:r\nContent-Length:\x203108\r\nContent-Security-Policy:\x20frame-ancesto
+SF:rs\x20'self';\x20script-src\x20'self'\x20cdn\.rudderlabs\.com\r\nConten
+SF:t-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Sun,\x2030\
+SF:x20May\x202021\x2001:23:56\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\r\n
+SF:X-Request-Id:\x20u39qjr4c9tfmuj7k4jn4iuoc3a\r\nX-Version-Id:\x205\.30\.
+SF:0\.5\.30\.1\.57fb31b889bf81d99d8af8176d4bbaaa\.false\r\nDate:\x20Mon,\x
+SF:2031\x20May\x202021\x2003:42:34\x20GMT\r\n\r\n<!doctype\x20html><html\x
+SF:20lang=\"en\"><head><meta\x20charset=\"utf-8\"><meta\x20name=\"viewport
+SF:\"\x20content=\"width=device-width,initial-scale=1,maximum-scale=1,user
+SF:-scalable=0\"><meta\x20name=\"robots\"\x20content=\"noindex,\x20nofollo
+SF:w\"><meta\x20name=\"referrer\"\x20content=\"no-referrer\"><title>Matter
+SF:most</title><meta\x20name=\"mobile-web-app-capable\"\x20content=\"yes\"
+SF:><meta\x20name=\"application-name\"\x20content=\"Mattermost\"><meta\x20
+SF:name=\"format-detection\"\x20content=\"telephone=no\"><link\x20re")%r(H
+SF:TTPOptions,5B,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nDate:\x2
+SF:0Mon,\x2031\x20May\x202021\x2003:42:35\x20GMT\r\nContent-Length:\x200\r
+SF:\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConten
+SF:t-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n
+SF:400\x20Bad\x20Request")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close
+SF:\r\n\r\n400\x20Bad\x20Request")%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nCon
+SF:nection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(TerminalServerCookie
+SF:,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;
+SF:\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request"
+SF:);
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May 31 09:02:20 2021 -- 1 IP address (1 host up) scanned in 102.05 seconds
