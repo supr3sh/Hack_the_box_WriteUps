@@ -1,0 +1,42 @@
+# Nmap 7.91 scan initiated Fri Jul  9 13:32:13 2021 as: nmap -vvv -p 21,80,135,139,445,5985,47001,49664,49665,49667,49666,49669,49668 -sN -sV -A -oN nmapReport 10.10.10.152
+Nmap scan report for 10.10.10.152
+Host is up, received echo-reply ttl 127 (0.17s latency).
+Scanned at 2021-07-09 13:32:14 IST for 3s
+
+PORT      STATE  SERVICE      REASON        VERSION
+21/tcp    closed ftp          reset ttl 127
+80/tcp    closed http         reset ttl 127
+135/tcp   closed msrpc        reset ttl 127
+139/tcp   closed netbios-ssn  reset ttl 127
+445/tcp   closed microsoft-ds reset ttl 127
+5985/tcp  closed wsman        reset ttl 127
+47001/tcp closed winrm        reset ttl 127
+49664/tcp closed unknown      reset ttl 127
+49665/tcp closed unknown      reset ttl 127
+49666/tcp closed unknown      reset ttl 127
+49667/tcp closed unknown      reset ttl 127
+49668/tcp closed unknown      reset ttl 127
+49669/tcp closed unknown      reset ttl 127
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing an open TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 SP1 (94%), Microsoft Windows 7 (94%), Microsoft Windows 7 Enterprise SP1 (94%), Microsoft Windows 7 Professional SP1 (94%), Microsoft Windows 7 SP0 - SP1, Windows Server 2008, or Windows Embedded Compact 7 (94%), Microsoft Windows 7 SP1 (94%), Microsoft Windows 10 (94%), Microsoft Windows 10 1507 (94%), Microsoft Windows 10 1507 - 1607 (94%), Microsoft Windows 10 1511 (94%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=7/9%OT=%CT=21%CU=42107%PV=Y%DS=2%DC=T%G=N%TM=60E80289%P=x86_64-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=N%T=80%W=2000%S=O%A=S+%F=AS%O=M54DNW8ST11%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   172.82 ms 10.10.14.1
+2   173.81 ms 10.10.10.152
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jul  9 13:32:17 2021 -- 1 IP address (1 host up) scanned in 4.39 seconds
